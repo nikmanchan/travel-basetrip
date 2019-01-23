@@ -1,0 +1,13 @@
+.travelContainer {
+    text-align: center;
+    width: 40vh;
+    margin: auto;
+}
+
+.publishDate {
+    padding-top: 2vmin;
+}
+
+.countryName {
+    padding-top: 4vmin;
+}
