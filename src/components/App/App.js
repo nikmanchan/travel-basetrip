@@ -25,12 +25,8 @@ class App extends Component {
     return (
       <div>
         <Navbar />
-        <Grid container spacing={12}>
-        <Grid item large>
-          <CountrySelect />
-        </Grid>
+        <CountrySelect />
 
-        </Grid>
       </div>
     );
   }
