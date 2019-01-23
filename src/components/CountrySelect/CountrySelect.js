@@ -43,10 +43,11 @@ class CountrySelect extends Component {
     event.preventDefault();
     axios
       .get(
-        `https://api.tugo.com/v1/travelsafe/countries/${this.state.country}`,
+        `https://api.thebasetrip.com/v3/countries/${this.state.country}`,
         {
           headers: {
-            "X-Auth-API-Key": "pzxtdae4ap3rd4sswp6uhdk2",
+            "Accept": "application/json",
+            "x-api-key": "i9mnaaokg04er2pt83j8mfufn4pwlilw98jhy7ct1te2m0jkj3miaozqt1pg",
             "Access-Control-Allow-Origin": "*"
           }
         }
