@@ -41,24 +41,6 @@ class TravelContent extends Component {
 
              <br></br>
 
-             {/* <Typography variant="h6" gutterBottom className="publishDate">
-                    Published
-                <br></br>
-                {this.formatDate(info.publishedDate)}
-              </Typography> */}
-
-              {/* Advisory Status */}
-              {/* <ExpansionPanel>
-                <ExpansionPanelSummary expandIcon={<ExpandMoreIcon />}>
-                  <Typography className={classes.heading}>
-                    Advisory Status
-                  </Typography>
-                </ExpansionPanelSummary>
-                <ExpansionPanelDetails>
-                  <Typography>{info.advisoryText}</Typography>
-                </ExpansionPanelDetails>
-              </ExpansionPanel> */}
-
               {/* basics */}
               <ExpansionPanel>
                 <ExpansionPanelSummary expandIcon={<ExpandMoreIcon />}>
@@ -68,14 +50,16 @@ class TravelContent extends Component {
                 </ExpansionPanelSummary>
                 <ExpansionPanelDetails>
                   <Typography component={"div"} variant={"body2"}>
-                    {/* {info.basic.map(
-                      (data, index) => (
-                        <p key={index}>
-                          <strong>{data.name.common}</strong>: &nbsp;
-                          <span>{data.capital.name}</span>
-                        </p>
-                      )
-                    )} */}
+                  <p>
+                    <strong>Capital</strong>: &nbsp;
+                    <span>{info.basic.capital.name}</span>
+                  </p>
+                  <p>
+                    <strong>Capital</strong>: &nbsp;
+                    <span>{info.basic.capital.name}</span>
+                  </p>
+                      
+               
                   </Typography>
                 </ExpansionPanelDetails>
               </ExpansionPanel>
