@@ -46,19 +46,19 @@ class CountrySelect extends Component {
         `https://api.thebasetrip.com/v3/countries/${this.state.country}`,
         {
           headers: {
-            "Accept": "application/json",
-            "x-api-key": "i9mnaaokg04er2pt83j8mfufn4pwlilw98jhy7ct1te2m0jkj3miaozqt1pg",
-            "Access-Control-Allow-Origin": "*"
+            "x-api-key": "i9mnaaokg04er2pt83j8mfufn4pwlilw98jhy7ct1te2m0jkj3miaozqt1pg"
           }
         }
       )
       .then(response =>
+
         this.props.dispatch({
           type: "CHOOSE_COUNTRY",
           payload: response.data
         })
+        
       );
-  };
+    };
 
   handleChange = property => event => {
     this.setState({
@@ -95,7 +95,7 @@ class CountrySelect extends Component {
                 <MenuItem value="">
                   <em>None</em>
                 </MenuItem>
-                <MenuItem value="ID">Indonesia</MenuItem>
+                {/* <MenuItem value="ID">Indonesia</MenuItem>
                 <MenuItem value="TH">Thailand</MenuItem>
                 <MenuItem value="PH">Phillippines</MenuItem>
                 <MenuItem value="IN">India</MenuItem>
@@ -110,9 +110,9 @@ class CountrySelect extends Component {
                 <MenuItem value="ES">Spain</MenuItem>
                 <MenuItem value="GR">Greece</MenuItem>
                 <MenuItem value="IT">Italy</MenuItem>
-                <MenuItem value="DE">Germany</MenuItem>
+                <MenuItem value="DE">Germany</MenuItem> */}
                 {/* <MenuItem value='CA'>Canada</MenuItem> */}
-                <MenuItem value="MX">Mexico</MenuItem>
+                <MenuItem value="mexico">Mexico</MenuItem>
               </Select>
               <FormHelperText>Choose a country</FormHelperText>
               <Button

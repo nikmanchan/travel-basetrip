@@ -35,7 +35,7 @@ class TravelContent extends Component {
           {this.props.countryInfo.map((info, index) => (
             <div key={index}>
 
-             <Typography variant="h4" className="countryName">
+             {/* <Typography variant="h4" className="countryName">
                 <b>{info.name}</b>
              </Typography>
 
@@ -43,10 +43,10 @@ class TravelContent extends Component {
                     Published
                 <br></br>
                 {this.formatDate(info.publishedDate)}
-              </Typography>
+              </Typography> */}
 
               {/* Advisory Status */}
-              <ExpansionPanel>
+              {/* <ExpansionPanel>
                 <ExpansionPanelSummary expandIcon={<ExpandMoreIcon />}>
                   <Typography className={classes.heading}>
                     Advisory Status
@@ -55,10 +55,10 @@ class TravelContent extends Component {
                 <ExpansionPanelDetails>
                   <Typography>{info.advisoryText}</Typography>
                 </ExpansionPanelDetails>
-              </ExpansionPanel>
+              </ExpansionPanel> */}
 
               {/* Vaccination */}
-              <ExpansionPanel>
+              {/* <ExpansionPanel>
                 <ExpansionPanelSummary expandIcon={<ExpandMoreIcon />}>
                   <Typography className={classes.heading}>
                     Vaccine Considerations
@@ -76,10 +76,10 @@ class TravelContent extends Component {
                     )}
                   </Typography>
                 </ExpansionPanelDetails>
-              </ExpansionPanel>
+              </ExpansionPanel> */}
 
               {/* Travel Requirements */}
-              <ExpansionPanel>
+              {/* <ExpansionPanel>
                 <ExpansionPanelSummary expandIcon={<ExpandMoreIcon />}>
                   <Typography className={classes.heading}>
                     Travel Requirements
@@ -97,10 +97,10 @@ class TravelContent extends Component {
                     )}
                   </Typography>
                 </ExpansionPanelDetails>
-              </ExpansionPanel>
+              </ExpansionPanel> */}
 
               {/* Climate */}
-              <ExpansionPanel>
+              {/* <ExpansionPanel>
                 <ExpansionPanelSummary expandIcon={<ExpandMoreIcon />}>
                   <Typography className={classes.heading}>Climate</Typography>
                 </ExpansionPanelSummary>
@@ -118,10 +118,10 @@ class TravelContent extends Component {
                     </Typography>
                   )}
                 </ExpansionPanelDetails>
-              </ExpansionPanel>
+              </ExpansionPanel> */}
 
               {/* Law and Culture */}
-              <ExpansionPanel>
+              {/* <ExpansionPanel>
                 <ExpansionPanelSummary expandIcon={<ExpandMoreIcon />}>
                   <Typography className={classes.heading}>
                     Law and Culture
@@ -141,10 +141,10 @@ class TravelContent extends Component {
                     </Typography>
                   )}
                 </ExpansionPanelDetails>
-              </ExpansionPanel>
+              </ExpansionPanel> */}
 
               {/* Safety */}
-              <ExpansionPanel>
+              {/* <ExpansionPanel>
                 <ExpansionPanelSummary expandIcon={<ExpandMoreIcon />}>
                   <Typography className={classes.heading}>
                     Safety Considerations
@@ -164,7 +164,7 @@ class TravelContent extends Component {
                     </Typography>
                   )}
                 </ExpansionPanelDetails>
-              </ExpansionPanel>
+              </ExpansionPanel> */}
             </div>
           ))}
         </div>
