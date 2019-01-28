@@ -35,11 +35,13 @@ class TravelContent extends Component {
           {this.props.countryInfo.map((info, index) => (
             <div key={index}>
 
-             {/* <Typography variant="h4" className="countryName">
-                <b>{info.name}</b>
+             <Typography variant="h4" className="countryName">
+                <b>{info.basic.name.common}</b>
              </Typography>
 
-             <Typography variant="h6" gutterBottom className="publishDate">
+             <br></br>
+
+             {/* <Typography variant="h6" gutterBottom className="publishDate">
                     Published
                 <br></br>
                 {this.formatDate(info.publishedDate)}
@@ -57,26 +59,26 @@ class TravelContent extends Component {
                 </ExpansionPanelDetails>
               </ExpansionPanel> */}
 
-              {/* Vaccination */}
-              {/* <ExpansionPanel>
+              {/* basics */}
+              <ExpansionPanel>
                 <ExpansionPanelSummary expandIcon={<ExpandMoreIcon />}>
                   <Typography className={classes.heading}>
-                    Vaccine Considerations
+                    General Information
                   </Typography>
                 </ExpansionPanelSummary>
                 <ExpansionPanelDetails>
                   <Typography component={"div"} variant={"body2"}>
-                    {info.health.diseasesAndVaccinesInfo.Vaccines.map(
+                    {/* {info.basic.map(
                       (data, index) => (
                         <p key={index}>
-                          <strong>{data.category}</strong>: &nbsp;
-                          <span>{data.description}</span>
+                          <strong>{data.name.common}</strong>: &nbsp;
+                          <span>{data.capital.name}</span>
                         </p>
                       )
-                    )}
+                    )} */}
                   </Typography>
                 </ExpansionPanelDetails>
-              </ExpansionPanel> */}
+              </ExpansionPanel>
 
               {/* Travel Requirements */}
               {/* <ExpansionPanel>
