@@ -75,6 +75,14 @@ class TravelContent extends Component {
                         )
                       )}
                     </p>
+                    {info.basic.textual.sections.map(
+                      (data,index) => (
+                        <p>
+                          {data.body}
+                        </p>
+                      )
+                    )}
+
                   </Typography>
                 </ExpansionPanelDetails>
               </ExpansionPanel>
