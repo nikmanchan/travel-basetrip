@@ -107,12 +107,12 @@ class CountrySelect extends Component {
                 <MenuItem value="IE">Ireland</MenuItem>
                 <MenuItem value="IS">Iceland</MenuItem>
                 <MenuItem value="PT">Portugal</MenuItem>
-                <MenuItem value="ES">Spain</MenuItem>
-                <MenuItem value="GR">Greece</MenuItem>
-                <MenuItem value="IT">Italy</MenuItem>
-                <MenuItem value="DE">Germany</MenuItem> */}
-                {/* <MenuItem value='CA'>Canada</MenuItem> */}
-                <MenuItem value="mexico">Mexico</MenuItem>
+                <MenuItem value="ES">Spain</MenuItem> */}
+                <MenuItem value="US">United States</MenuItem>
+                <MenuItem value="CH">Switzerland</MenuItem>
+                <MenuItem value="FR">France</MenuItem>
+                <MenuItem value='HR'>Croatia</MenuItem>
+                <MenuItem value="MX">Mexico</MenuItem>
               </Select>
               <FormHelperText>Choose a country</FormHelperText>
               <Button
