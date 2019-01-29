@@ -77,7 +77,7 @@ class TravelContent extends Component {
                     </p>
                     {info.basic.textual.sections.map(
                       (data,index) => (
-                        <p>
+                        <p key={index}>
                           {data.body}
                         </p>
                       )
@@ -87,26 +87,25 @@ class TravelContent extends Component {
                 </ExpansionPanelDetails>
               </ExpansionPanel>
 
-              {/* Travel Requirements */}
-              {/* <ExpansionPanel>
+              {/* Currency */}
+              <ExpansionPanel>
                 <ExpansionPanelSummary expandIcon={<ExpandMoreIcon />}>
                   <Typography className={classes.heading}>
-                    Travel Requirements
+                    Currency
                   </Typography>
                 </ExpansionPanelSummary>
                 <ExpansionPanelDetails>
                   <Typography component={"div"} variant={"body2"}>
-                    {info.entryExitRequirement.requirementInfo.map(
-                      (data, index) => (
+                  {info.currency.textual.sections.map(
+                      (data,index) => (
                         <p key={index}>
-                          <strong>{data.category}</strong>: &nbsp;
-                          <span>{data.description}</span>
+                          {data.body}
                         </p>
                       )
                     )}
                   </Typography>
                 </ExpansionPanelDetails>
-              </ExpansionPanel> */}
+              </ExpansionPanel>
 
               {/* Climate */}
               {/* <ExpansionPanel>
