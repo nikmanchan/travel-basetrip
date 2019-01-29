@@ -28,7 +28,8 @@ const styles = theme => ({
   },
   button: {
     margin: theme.spacing.unit
-  }
+  },
+  checked: {},
 });
 
 class CountrySelect extends Component {
@@ -39,7 +40,8 @@ class CountrySelect extends Component {
     vaccines: [],
     climate: "",
     publishedDate: "",
-    recentUpdates: ""
+    recentUpdates: "",
+    selectedValue: '',
   };
 
   handleSelect = event => {
