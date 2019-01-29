@@ -67,22 +67,13 @@ class TravelContent extends Component {
                     </p>
                     <p>
                       <strong>Language(s)</strong>: &nbsp;
-                      {info.basic.languages.map(
-                        (data, index) => (
-                          <span key={index}>
-                            {data.name} &nbsp;
-                          </span>
-                        )
-                      )}
+                      {info.basic.languages.map((data, index) => (
+                        <span key={index}>{data.name} &nbsp;</span>
+                      ))}
                     </p>
-                    {info.basic.textual.sections.map(
-                      (data,index) => (
-                        <p key={index}>
-                          {data.body}
-                        </p>
-                      )
-                    )}
-
+                    {info.basic.textual.sections.map((data, index) => (
+                      <p key={index}>{data.body}</p>
+                    ))}
                   </Typography>
                 </ExpansionPanelDetails>
               </ExpansionPanel>
@@ -90,19 +81,13 @@ class TravelContent extends Component {
               {/* Currency */}
               <ExpansionPanel>
                 <ExpansionPanelSummary expandIcon={<ExpandMoreIcon />}>
-                  <Typography className={classes.heading}>
-                    Currency
-                  </Typography>
+                  <Typography className={classes.heading}>Currency</Typography>
                 </ExpansionPanelSummary>
                 <ExpansionPanelDetails>
                   <Typography component={"div"} variant={"body2"}>
-                  {info.currency.textual.sections.map(
-                      (data,index) => (
-                        <p key={index}>
-                          {data.body}
-                        </p>
-                      )
-                    )}
+                    {info.currency.textual.sections.map((data, index) => (
+                      <p key={index}>{data.body}</p>
+                    ))}
                   </Typography>
                 </ExpansionPanelDetails>
               </ExpansionPanel>
@@ -110,19 +95,13 @@ class TravelContent extends Component {
               {/* Driving */}
               <ExpansionPanel>
                 <ExpansionPanelSummary expandIcon={<ExpandMoreIcon />}>
-                  <Typography className={classes.heading}>
-                    Driving
-                  </Typography>
+                  <Typography className={classes.heading}>Driving</Typography>
                 </ExpansionPanelSummary>
                 <ExpansionPanelDetails>
                   <Typography component={"div"} variant={"body2"}>
-                  {info.driving.rules.textual.sections.map(
-                      (data,index) => (
-                        <p key={index}>
-                          {data.body}
-                        </p>
-                      )
-                    )}
+                    {info.driving.rules.textual.sections.map((data, index) => (
+                      <p key={index}>{data.body}</p>
+                    ))}
                   </Typography>
                 </ExpansionPanelDetails>
               </ExpansionPanel>
@@ -136,39 +115,51 @@ class TravelContent extends Component {
                 </ExpansionPanelSummary>
                 <ExpansionPanelDetails>
                   <Typography component={"div"} variant={"body2"}>
-                  {info.electricity.textual.sections.map(
-                      (data,index) => (
-                        <p key={index}>
-                          {data.body}
-                        </p>
-                      )
-                    )}
+                    {info.electricity.textual.sections.map((data, index) => (
+                      <p key={index}>{data.body}</p>
+                    ))}
                   </Typography>
                 </ExpansionPanelDetails>
               </ExpansionPanel>
 
-              {/* Safety */}
-              {/* <ExpansionPanel>
+              {/* Health */}
+              <ExpansionPanel>
+                <ExpansionPanelSummary expandIcon={<ExpandMoreIcon />}>
+                  <Typography className={classes.heading}>Health</Typography>
+                </ExpansionPanelSummary>
+                <ExpansionPanelDetails>
+                  <Typography component={"div"} variant={"body2"}>
+                    {info.health.vaccination.textual.sections.map(
+                      (data, index) => (
+                        <p key={index}>{data.body}</p>
+                      )
+                    )}
+                    <p>
+                    <strong>Risk(s)</strong>: &nbsp;
+                      {info.health.vaccination.risks.map((data, index) => (
+                        <span key={index}>{data.type} &nbsp;</span>
+                      ))}
+                    </p>
+                  </Typography>
+                </ExpansionPanelDetails>
+              </ExpansionPanel>
+
+           {/* Internet */}
+           <ExpansionPanel>
                 <ExpansionPanelSummary expandIcon={<ExpandMoreIcon />}>
                   <Typography className={classes.heading}>
-                    Safety Considerations
+                    Internet
                   </Typography>
                 </ExpansionPanelSummary>
                 <ExpansionPanelDetails>
-                {!info.safety.safetyInfo.length > 0 ? (
-                    <p>N/A</p>
-                  ) : (
-                    <Typography component={"div"} variant={"body2"}>
-                      {info.safety.safetyInfo.map((data, index) => (
-                        <p key={index}>
-                          <strong>{data.category}</strong>: &nbsp;
-                          <span>{data.description}</span>
-                        </p>
-                      ))}
-                    </Typography>
-                  )}
+                  <Typography component={"div"} variant={"body2"}>
+                    {info.internet.textual.sections.map((data, index) => (
+                      <p key={index}>{data.body}</p>
+                    ))}
+                  </Typography>
                 </ExpansionPanelDetails>
-              </ExpansionPanel> */}
+              </ExpansionPanel>
+
             </div>
           ))}
         </div>
