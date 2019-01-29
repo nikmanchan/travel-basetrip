@@ -176,6 +176,22 @@ class TravelContent extends Component {
                 </ExpansionPanelDetails>
               </ExpansionPanel>
 
+           {/* Tipping */}
+           <ExpansionPanel>
+                <ExpansionPanelSummary expandIcon={<ExpandMoreIcon />}>
+                  <Typography className={classes.heading}>
+                    Tipping
+                  </Typography>
+                </ExpansionPanelSummary>
+                <ExpansionPanelDetails>
+                  <Typography component={"div"} variant={"body2"}>
+                    {info.tipping.textual.sections.map((data, index) => (
+                      <p key={index}>{data.body}</p>
+                    ))}
+                  </Typography>
+                </ExpansionPanelDetails>
+              </ExpansionPanel>
+
             </div>
           ))}
         </div>
