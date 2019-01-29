@@ -12,9 +12,11 @@ import FormControl from "@material-ui/core/FormControl";
 import Select from "@material-ui/core/Select";
 import TravelContent from "../TravelContent/TravelContent";
 import { MuiThemeProvider, createMuiTheme } from "@material-ui/core/styles";
-import Radio from '@material-ui/core/Radio';
-import RadioButtonUncheckedIcon from '@material-ui/icons/RadioButtonUnchecked';
-import RadioButtonCheckedIcon from '@material-ui/icons/RadioButtonChecked';
+import Radio from "@material-ui/core/Radio";
+import RadioButtonUncheckedIcon from "@material-ui/icons/RadioButtonUnchecked";
+import RadioButtonCheckedIcon from "@material-ui/icons/RadioButtonChecked";
+import FormGroup from '@material-ui/core/FormGroup';
+import FormControlLabel from '@material-ui/core/FormControlLabel';
 
 const styles = theme => ({
   container: {},
@@ -29,7 +31,7 @@ const styles = theme => ({
   button: {
     margin: theme.spacing.unit
   },
-  checked: {},
+  checked: {}
 });
 
 class CountrySelect extends Component {
@@ -41,29 +43,25 @@ class CountrySelect extends Component {
     climate: "",
     publishedDate: "",
     recentUpdates: "",
-    selectedValue: '',
+    selectedValue: ""
   };
 
   handleSelect = event => {
     event.preventDefault();
     axios
-      .get(
-        `https://api.thebasetrip.com/v3/countries/${this.state.country}`,
-        {
-          headers: {
-            "x-api-key": "i9mnaaokg04er2pt83j8mfufn4pwlilw98jhy7ct1te2m0jkj3miaozqt1pg"
-          }
+      .get(`https://api.thebasetrip.com/v3/countries/${this.state.country}`, {
+        headers: {
+          "x-api-key":
+            "i9mnaaokg04er2pt83j8mfufn4pwlilw98jhy7ct1te2m0jkj3miaozqt1pg"
         }
-      )
+      })
       .then(response =>
-
         this.props.dispatch({
           type: "CHOOSE_COUNTRY",
           payload: response.data
         })
-        
       );
-    };
+  };
 
   handleChange = property => event => {
     this.setState({
@@ -93,6 +91,21 @@ class CountrySelect extends Component {
     return (
       <div className="countrySelectComponent">
         <MuiThemeProvider theme={theme}>
+          <Radio
+            checked={this.state.selectedValue === "a"}
+            onChange={this.handleCheckboxChange}
+            value="a"
+            name="selectCountries"
+            aria-label="A"
+          />
+          <Radio
+            checked={this.state.selectedValue === "b"}
+            onChange={this.handleCheckboxChange}
+            value="b"
+            name="selectCities"
+            aria-label="B"
+          />
+
           <form className={classes.root} autoComplete="off">
             <FormControl className={classes.formControl}>
               <InputLabel htmlFor="age-simple">Countries</InputLabel>
@@ -120,7 +133,7 @@ class CountrySelect extends Component {
                 <MenuItem value="US">United States</MenuItem>
                 <MenuItem value="CH">Switzerland</MenuItem>
                 <MenuItem value="FR">France</MenuItem>
-                <MenuItem value='HR'>Croatia</MenuItem>
+                <MenuItem value="HR">Croatia</MenuItem>
                 <MenuItem value="MX">Mexico</MenuItem>
               </Select>
               <FormHelperText>Choose a country</FormHelperText>
