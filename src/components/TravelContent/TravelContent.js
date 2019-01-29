@@ -107,49 +107,45 @@ class TravelContent extends Component {
                 </ExpansionPanelDetails>
               </ExpansionPanel>
 
-              {/* Climate */}
-              {/* <ExpansionPanel>
-                <ExpansionPanelSummary expandIcon={<ExpandMoreIcon />}>
-                  <Typography className={classes.heading}>Climate</Typography>
-                </ExpansionPanelSummary>
-                <ExpansionPanelDetails>
-                  {!info.climate.climateInfo.length > 0 ? (
-                    <p>N/A</p>
-                  ) : (
-                    <Typography component={"div"} variant={"body2"}>
-                      {info.climate.climateInfo.map((data, index) => (
-                        <p key={index}>
-                          <strong>{data.category}</strong>: &nbsp;
-                          <span>{data.description}</span>
-                        </p>
-                      ))}
-                    </Typography>
-                  )}
-                </ExpansionPanelDetails>
-              </ExpansionPanel> */}
-
-              {/* Law and Culture */}
-              {/* <ExpansionPanel>
+              {/* Driving */}
+              <ExpansionPanel>
                 <ExpansionPanelSummary expandIcon={<ExpandMoreIcon />}>
                   <Typography className={classes.heading}>
-                    Law and Culture
+                    Driving
                   </Typography>
                 </ExpansionPanelSummary>
                 <ExpansionPanelDetails>
-                {!info.lawAndCulture.lawAndCultureInfo.length > 0 ? (
-                    <p>N/A</p>
-                  ) : (
-                    <Typography component={"div"} variant={"body2"}>
-                      {info.lawAndCulture.lawAndCultureInfo.map((data, index) => (
+                  <Typography component={"div"} variant={"body2"}>
+                  {info.driving.rules.textual.sections.map(
+                      (data,index) => (
                         <p key={index}>
-                          <strong>{data.category}</strong>: &nbsp;
-                          <span>{data.description}</span>
+                          {data.body}
                         </p>
-                      ))}
-                    </Typography>
-                  )}
+                      )
+                    )}
+                  </Typography>
                 </ExpansionPanelDetails>
-              </ExpansionPanel> */}
+              </ExpansionPanel>
+
+              {/* Electricity */}
+              <ExpansionPanel>
+                <ExpansionPanelSummary expandIcon={<ExpandMoreIcon />}>
+                  <Typography className={classes.heading}>
+                    Electricity
+                  </Typography>
+                </ExpansionPanelSummary>
+                <ExpansionPanelDetails>
+                  <Typography component={"div"} variant={"body2"}>
+                  {info.electricity.textual.sections.map(
+                      (data,index) => (
+                        <p key={index}>
+                          {data.body}
+                        </p>
+                      )
+                    )}
+                  </Typography>
+                </ExpansionPanelDetails>
+              </ExpansionPanel>
 
               {/* Safety */}
               {/* <ExpansionPanel>
