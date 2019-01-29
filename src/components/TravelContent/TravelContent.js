@@ -160,6 +160,22 @@ class TravelContent extends Component {
                 </ExpansionPanelDetails>
               </ExpansionPanel>
 
+           {/* Mobile Phones */}
+           <ExpansionPanel>
+                <ExpansionPanelSummary expandIcon={<ExpandMoreIcon />}>
+                  <Typography className={classes.heading}>
+                    Mobile Phones
+                  </Typography>
+                </ExpansionPanelSummary>
+                <ExpansionPanelDetails>
+                  <Typography component={"div"} variant={"body2"}>
+                    {info.mobilePhone.textual.sections.map((data, index) => (
+                      <p key={index}>{data.body}</p>
+                    ))}
+                  </Typography>
+                </ExpansionPanelDetails>
+              </ExpansionPanel>
+
             </div>
           ))}
         </div>
