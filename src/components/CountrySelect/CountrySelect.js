@@ -71,6 +71,10 @@ class CountrySelect extends Component {
     });
   };
 
+  handleCheckboxChange = event => {
+    this.setState({ selectedValue: event.target.value });
+  };
+
   render() {
     const { classes } = this.props;
 
