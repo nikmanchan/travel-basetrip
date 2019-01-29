@@ -19,8 +19,7 @@ const styles = theme => ({
     fontWeight: theme.typography.fontWeightRegular
   },
   media: {
-    height: "20vh",
-    
+    height: "20vh"
   },
   card: {
     width: "40vh",
@@ -43,7 +42,6 @@ class TravelContent extends Component {
         <div className="travelContainer">
           {this.props.countryInfo.map((info, index) => (
             <div key={index}>
-
               <Card className={classes.card} key={index}>
                 <CardMedia
                   className={classes.media}
@@ -68,8 +66,14 @@ class TravelContent extends Component {
                       <span>{info.basic.capital.name}</span>
                     </p>
                     <p>
-                      <strong>Currency</strong>: &nbsp;
-                      <span>{info.basic.capital.name}</span>
+                      <strong>Language(s)</strong>: &nbsp;
+                      {info.basic.languages.map(
+                        (data, index) => (
+                          <span key={index}>
+                            {data.name} &nbsp;
+                          </span>
+                        )
+                      )}
                     </p>
                   </Typography>
                 </ExpansionPanelDetails>
